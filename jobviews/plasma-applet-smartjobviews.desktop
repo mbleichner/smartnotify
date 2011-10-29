@@ -1,0 +1,18 @@
+[Desktop Entry]
+Name=SmartJobViews
+Comment=Plasma job monitoring
+Type=Service
+Icon=system-run
+
+X-KDE-ServiceTypes=Plasma/Applet
+X-KDE-Library=plasma_applet_smartjobviews
+X-KDE-PluginInfo-Author=Manuel Bleichner
+X-KDE-PluginInfo-Email=mbleichner@web.de
+X-KDE-PluginInfo-Name=smartjobviews
+X-KDE-PluginInfo-Version=0.1
+X-KDE-PluginInfo-Website=http://www.documentroot.net
+X-KDE-PluginInfo-Category=
+X-KDE-PluginInfo-Depends=
+X-KDE-PluginInfo-License=GPL
+X-KDE-PluginInfo-EnabledByDefault=true
+

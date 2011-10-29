@@ -1,0 +1,4 @@
+File=notificationconfig.kcfgc
+ClassName=NotificationConfig
+Singleton=true
+Mutators=true

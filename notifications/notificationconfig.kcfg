@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
+                          http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
+<kcfgfile name="notificationsrc"/>
+
+<group name="default">
+  <entry name="HistorySize" type="Int">
+    <label>History size</label>
+    <default>30</default> <min>0</min> <max>50</max>
+  </entry>
+  <entry name="FontSize" type="Int">
+    <label>Font size</label>
+    <default>12</default> <min>4</min> <max>30</max>
+  </entry>
+  <entry name="MinimumWidth" type="Int">
+    <label>Minimum width of applet</label>
+    <default>200</default> <min>50</min> <max>10000</max>
+  </entry>
+  <entry name="PreferredWidth" type="Int">
+    <label>Preferred width of applet</label>
+    <default>500</default> <min>50</min> <max>10000</max>
+  </entry>
+  <entry name="ScrollSpeed" type="Int">
+    <default>50</default> <min>0</min> <max>100</max>
+  </entry>
+  <entry name="FadeSpeed" type="Int">
+    <default>50</default> <min>0</min> <max>100</max>
+  </entry>
+  <entry name="PauseTime" type="Int">
+    <default>50</default> <min>0</min> <max>100</max>
+  </entry>
+</group>
+
+</kcfg>

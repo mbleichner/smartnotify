@@ -1,0 +1,15 @@
+Make sure that cmake and kdelibs5-dev are installed on your system.
+Then execute the following commands:
+
+  cd build
+  cmake -DCMAKE_INSTALL_PREFIX=/usr ..
+  make
+  sudo make install
+
+
+Notify KDE of the newly installed plasmoids:
+
+  kbuildsycoca4
+
+
+Now you can add them to your desktop and have a lot of fun!

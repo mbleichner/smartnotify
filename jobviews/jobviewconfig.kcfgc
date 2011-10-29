@@ -1,0 +1,4 @@
+File=jobviewconfig.kcfgc
+ClassName=JobViewConfig
+Singleton=true
+Mutators=true

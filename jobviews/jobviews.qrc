@@ -1,0 +1,6 @@
+<!DOCTYPE RCC><RCC version="1.0">
+<qresource>
+  <file alias="jobviews-active.png">../resources/jobviews-active.png</file>
+  <file alias="jobviews-inactive.png">../resources/jobviews-inactive.png</file>
+</qresource>
+</RCC>
