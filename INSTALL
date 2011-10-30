@@ -1,7 +1,7 @@
 Make sure that cmake and kdelibs5-dev are installed on your system.
 Then execute the following commands:
 
-  cd build
+  mkdir build; cd build
   cmake -DCMAKE_INSTALL_PREFIX=/usr ..
   make
   sudo make install
