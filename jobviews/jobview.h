@@ -55,6 +55,7 @@ class JobView : public Plasma::Frame {
     void setSpeed(qulonglong bytesPerSecond);
     void setSuspended(bool suspended);
     void setTotalAmount(qulonglong amount, const QString &unit);
+    void setDestUrl(const QDBusVariant &destUrl);
     void terminate(const QString &errorMessage);
 
   protected Q_SLOTS:

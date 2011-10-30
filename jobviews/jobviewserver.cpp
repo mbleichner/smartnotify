@@ -96,13 +96,19 @@ void JobViewServer::setupUi() {
 
 void JobViewServer::startServer() {
   QDBusConnection bus = QDBusConnection::sessionBus();
-  if (bus.registerService("org.kde.JobViewServer") && bus.registerObject("/JobViewServer", this)) {
+  bus.unregisterService("org.kde.kuiserver"); 
+  bus.unregisterService("org.kde.JobViewServer");
+  bus.unregisterObject("/JobViewServer");
+  if (bus.registerService("org.kde.kuiserver") && bus.registerService("org.kde.JobViewServer") && bus.registerObject("/JobViewServer", this)) {
     connected = true;
   } else {
     connected = false;
-    QDBusServiceWatcher* watcher = new QDBusServiceWatcher("org.kde.JobViewServer", bus, QDBusServiceWatcher::WatchForUnregistration, this);
+    QDBusServiceWatcher* watcher = new QDBusServiceWatcher("org.kde.kuiserver", bus, QDBusServiceWatcher::WatchForUnregistration, this);
+    QDBusServiceWatcher* watcher2 = new QDBusServiceWatcher("org.kde.JobViewServer", bus, QDBusServiceWatcher::WatchForUnregistration, this);
     QObject::connect(watcher, SIGNAL(serviceUnregistered(QString)), this, SLOT(startServer()));
     QObject::connect(watcher, SIGNAL(serviceUnregistered(QString)), watcher, SLOT(deleteLater()));
+    QObject::connect(watcher2, SIGNAL(serviceUnregistered(QString)), this, SLOT(startServer()));
+    QObject::connect(watcher2, SIGNAL(serviceUnregistered(QString)), watcher2, SLOT(deleteLater()));
   }
   updateStatusIndicators();
 }

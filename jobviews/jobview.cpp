@@ -3,7 +3,7 @@
 #include <KIcon>
 
 JobView::JobView(QString objectPath, QString appName, QString appIconName, int capabilities) : Plasma::Frame() {
-  new JobViewAdaptor(this);
+  new JobViewV2Adaptor(this);
   myObjectPath = objectPath;
   myAppName    = appName;
   myIcon       = KIcon(appIconName);
@@ -173,6 +173,8 @@ void JobView::setSuspended(bool suspended) {
   suspendButton->setIcon(KIcon(suspended ? "media-playback-start" : "media-playback-pause"));
   speedLabel->setText(suspended ? "suspended" : "resuming...");
 }
+
+void JobView::setDestUrl(const QDBusVariant &destUrl) {}
 
 void JobView::terminate(const QString &errorMessage) {
   if (!errorMessage.isEmpty()) {
